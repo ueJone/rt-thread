@@ -451,6 +451,7 @@ static void hc32_phy_link_change(void)
             {
                 hc32_eth_device.eth_speed = ETH_MAC_SPEED_10M;
             }
+            ETH_MAC_SetDuplexSpeed(hc32_eth_device.eth_mode, hc32_eth_device.eth_speed);
             LOG_D("link up");
             eth_device_linkchange(&hc32_eth_device.parent, RT_TRUE);
         }
